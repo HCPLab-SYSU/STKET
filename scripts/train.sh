@@ -1,0 +1,17 @@
+OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 CUDA_VISIBLE_DEVICES=0 python train.py \
+	-mode predcls \
+	-datasize large \
+	-data_path /data0/datasets/ActionGenome/dataset/ag/ \
+    -save_path ./checkpoints/debug \
+    -lr 2e-5 \
+	-nepoch 10 \
+	-pred_contact_threshold 0.8 \
+	-window_size 4 \
+	-N_layer 1 \
+	-enc_layer_num 2 \
+	-dec_layer_num 2 \
+	-bce_loss \
+	-use_spatial_prior \
+	-spatial_prior_loss \
+	-use_temporal_prior \
+	-temporal_prior_loss \
