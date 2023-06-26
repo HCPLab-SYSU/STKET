@@ -10,7 +10,6 @@ from dataloader.action_genome import AG, cuda_collate_fn
 
 from lib.config import Config
 from lib.evaluation_recall import BasicSceneGraphEvaluator
-from lib.new_evaluation_recall import DynamicSceneGraphEvaluator
 from lib.object_detector import detector
 from lib.stket import STKET
 
@@ -66,25 +65,6 @@ evaluator2 = [BasicSceneGraphEvaluator(mode=conf.mode,
     iou_threshold=0.5,
     constraint='no') for _ in range(3)]
 
-evaluator3 = [DynamicSceneGraphEvaluator(
-    mode=conf.mode,
-    AG_object_classes=AG_dataset.object_classes,
-    AG_all_predicates=AG_dataset.relationship_classes,
-    AG_attention_predicates=AG_dataset.attention_relationships,
-    AG_spatial_predicates=AG_dataset.spatial_relationships,
-    AG_contacting_predicates=AG_dataset.contacting_relationships,
-    iou_threshold=0.5,
-    constraint=True) for _ in range(3)]
-
-evaluator4 = [DynamicSceneGraphEvaluator(
-    mode=conf.mode,
-    AG_object_classes=AG_dataset.object_classes,
-    AG_all_predicates=AG_dataset.relationship_classes,
-    AG_attention_predicates=AG_dataset.attention_relationships,
-    AG_spatial_predicates=AG_dataset.spatial_relationships,
-    AG_contacting_predicates=AG_dataset.contacting_relationships,
-    iou_threshold=0.5,
-    constraint=False) for _ in range(3)]
 
 with torch.no_grad():
     for b, data in enumerate(tqdm(dataloader)):
@@ -100,9 +80,7 @@ with torch.no_grad():
 
         evaluator1[0].evaluate_scene_graph(gt_annotation, pred, 'spatial'), evaluator1[1].evaluate_scene_graph(gt_annotation, pred, 'temporal'), evaluator1[2].evaluate_scene_graph(gt_annotation, pred, 'ensemble')
         evaluator2[0].evaluate_scene_graph(gt_annotation, pred, 'spatial'), evaluator2[1].evaluate_scene_graph(gt_annotation, pred, 'temporal'), evaluator2[2].evaluate_scene_graph(gt_annotation, pred, 'ensemble')
-        evaluator3[0].evaluate_scene_graph(gt_annotation, pred, 'spatial'), evaluator3[1].evaluate_scene_graph(gt_annotation, pred, 'temporal'), evaluator3[2].evaluate_scene_graph(gt_annotation, pred, 'ensemble')
-        evaluator4[0].evaluate_scene_graph(gt_annotation, pred, 'spatial'), evaluator4[1].evaluate_scene_graph(gt_annotation, pred, 'temporal'), evaluator4[2].evaluate_scene_graph(gt_annotation, pred, 'ensemble')
-
+       
 print('-------------------------Basic Metric-------------------------------')
 
 print('-------------------------with constraint-------------------------------')    
@@ -110,10 +88,3 @@ evaluator1[0].print_stats(None, 'spatial'), evaluator1[1].print_stats(None, 'tem
 
 print('-------------------------no constraint-------------------------------')    
 evaluator2[0].print_stats(None, 'spatial'), evaluator2[1].print_stats(None, 'temporal'), evaluator2[2].print_stats(None, 'ensemble')
-print('-------------------------Dynamic Metric-----------------------------')
-
-print('-------------------------with constraint----------------------------')
-evaluator3[0].print_stats(None, 'spatial'), evaluator3[1].print_stats(None, 'temporal'), evaluator3[2].print_stats(None, 'ensemble')
-
-print('-------------------------no constraint------------------------------')
-evaluator4[0].print_stats(None, 'spatial'), evaluator4[1].print_stats(None, 'temporal'), evaluator4[2].print_stats(None, 'ensemble')
