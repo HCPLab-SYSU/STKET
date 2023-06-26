@@ -7,8 +7,6 @@ Implementation of papers:
   Tao Pu, Tianshui Chen, Hefeng Wu, Yongyi Lu, Liang Lin
 
 ## Usage
-We construct this project based on [Yrcong' repository](https://github.com/yrcong/STTran).
-
 Firstly, we download the directory of data and fasterRCNN in [Yrcong' repository](https://github.com/yrcong/STTran).
 
 Then, we follow the instruction to compile some code for bbox operations.
