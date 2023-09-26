@@ -2,14 +2,14 @@
 
 Implementation of papers: 
 
-- Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation  
+- [Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation](https://arxiv.org/pdf/2309.13237.pdf)  
   Technical Report.   
   Tao Pu, Tianshui Chen, Hefeng Wu, Yongyi Lu, Liang Lin
 
 ## Usage
 Firstly, we download the directory of data and fasterRCNN in [Yrcong' repository](https://github.com/yrcong/STTran).
 
-Then, we follow the instruction to compile some code for bbox operations.
+Then, we follow the instructions to compile some code for bbox operations.
 ```
 cd lib/draw_rectangles
 python setup.py build_ext --inplace
