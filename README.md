@@ -6,6 +6,8 @@ Implementation of papers:
   IEEE Transactions on Image Processing (T-IP)，2023.
   Tao Pu, Tianshui Chen, Hefeng Wu, Yongyi Lu, Liang Lin
 
+![](./figures/framework.pdf)
+
 ## Usage
 Firstly, we download the directory of data and fasterRCNN in [Yrcong' repository](https://github.com/yrcong/STTran).
 
