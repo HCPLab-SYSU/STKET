@@ -3,10 +3,10 @@
 Implementation of papers: 
 
 - [Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation](https://arxiv.org/pdf/2309.13237.pdf)  
-  IEEE Transactions on Image Processing (T-IP)，2023.
+  IEEE Transactions on Image Processing (T-IP)，2023.   
   Tao Pu, Tianshui Chen, Hefeng Wu, Yongyi Lu, Liang Lin
 
-![](./figures/framework.pdf)
+![](./figures/framework.png)
 
 ## Usage
 Firstly, we download the directory of data and fasterRCNN in [Yrcong' repository](https://github.com/yrcong/STTran).
