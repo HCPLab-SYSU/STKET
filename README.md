@@ -3,7 +3,7 @@
 Implementation of papers: 
 
 - [Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation](https://arxiv.org/pdf/2309.13237.pdf)  
-  IEEE Transactions on Image Processing (T-IP)，2023.   
+  IEEE Transactions on Image Processing (T-IP)，2024.   
   Tao Pu, Tianshui Chen, Hefeng Wu, Yongyi Lu, Liang Lin
 
 ![](./figures/framework.png)
@@ -25,11 +25,11 @@ For the object detector part, please follow the compilation from https://github.
 
 ## Citation
 ```
-@article{Pu2023STKET,
+@article{Pu2024STKET,
   title={Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation},
   author={Pu, Tao and Chen, Tianshui and Wu, Hefeng and Lu, Yongyi and Lin, Liang},
-  journal={arXiv preprint arXiv:2309.13237},
-  year={2023}
+  journal={IEEE Transactions on Image Processing},
+  year={2024}
 }
 ```
   
