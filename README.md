@@ -31,6 +31,14 @@ For the object detector part, please follow the compilation from https://github.
   journal={IEEE Transactions on Image Processing},
   year={2024}
 }
+
+@inproceedings{Pu2023VidSGG,
+  title={Video Scene Graph Generation with Spatial-Temporal Knowledge},
+  author={Pu, Tao},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={9340--9344},
+  year={2023}
+}
 ```
   
 ## Contributors
