@@ -33,11 +33,13 @@ For the object detector part, please follow the compilation from https://github.
 }
 
 @inproceedings{Pu2023VidSGG,
-  title={Video Scene Graph Generation with Spatial-Temporal Knowledge},
   author={Pu, Tao},
+  title={Video Scene Graph Generation with Spatial-Temporal Knowledge},
   booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  year={2023},
   pages={9340--9344},
-  year={2023}
+  publisher={Association for Computing Machinery},
+  doi={10.1145/3581783.3613433}
 }
 ```
   
