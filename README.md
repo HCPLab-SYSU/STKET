@@ -1,4 +1,4 @@
-# Spatial-Temporal Knowledge-Embedded Transformer 
+# Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation
 
 Implementation of papers: 
 
