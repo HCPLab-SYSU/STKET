@@ -26,10 +26,14 @@ For the object detector part, please follow the compilation from https://github.
 ## Citation
 ```
 @article{Pu2024STKET,
-  title={Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation},
   author={Pu, Tao and Chen, Tianshui and Wu, Hefeng and Lu, Yongyi and Lin, Liang},
+  title={Spatial-Temporal Knowledge-Embedded Transformer for Video Scene Graph Generation},
   journal={IEEE Transactions on Image Processing},
-  year={2024}
+  volume={33},
+  pages={556-568},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/TIP.2023.3345652}
 }
 
 @inproceedings{Pu2023VidSGG,
